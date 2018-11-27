@@ -291,5 +291,4 @@ RUN apt-get update \
 RUN R -e "install.packages('BiocManager', repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('ggplot2', repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('evaluate', repos = 'http://cran.us.r-project.org')"
-RUN R -e "library(BiocManager)" ; \
-	"BiocManager::install("CAGEr")"
+
