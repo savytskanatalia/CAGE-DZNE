@@ -220,9 +220,9 @@ RUN set -ex; \
 
 RUN	pip install joblib
 
-RUN wget http://downloads.sourceforge.net/project/tagdust/tagdust-2.33.tar.gz ; \
-	tar -xvf tagdust-2.33.tar.gz ; \
-	cd tagdust-2.33 ; \
+RUN wget genome.gsc.riken.jp/osc/english/software/src/tagdust.tgz ; \
+	tar -xvzf tagdust.tgz ; \
+	cd tagdust ; \
 	./configure ; \
 	make ; \
 	make check ; \
@@ -244,8 +244,8 @@ RUN	cd /usr/local/ ; \
 
 ENV PATH /usr/local/STAR-2.6.0a/source:$PATH
 
-RUN	rm -r tagdust-2.33 ; \
-	rm tagdust-2.33.tar.gz 
+RUN	rm -r tagdust ; \
+	rm tagdust.tgz 
 
 RUN	cd  usr/local/bin/ ; \
 	wget http://downloads.sourceforge.net/project/subread/subread-1.4.6-p2/subread-1.4.6-p2-source.tar.gz ; \
