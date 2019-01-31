@@ -11,9 +11,13 @@ The Dockerfile allows installing R-base, Python3, TagDust 2.33 (reads extractor)
 
 
 *To build image:*
+```
 
 docker build - < Dockerfile -t $TAGOFYOURCHOICE
+```
 
 *To mount container:*
+```
 
 docker run -it -v /directory/of/your/choice:/data $TAGOFYOURCHOICE
+```
